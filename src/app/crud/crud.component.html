@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8" style="margin-top: 10px">
+    <form action="/action_page.php">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Enter Name"
+          [(ngModel)]="name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Enter email"
+          [(ngModel)]="email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="msg">Message:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="msg"
+          placeholder="Enter Message"
+          [(ngModel)]="msg"
+          name="msg"
+        />
+      </div>
+
+      <button
+        type="submit"
+        *ngIf="submitButton"
+        class="btn btn-primary"
+        (click)="sub()"
+      >
+        Submit
+      </button>
+      &nbsp;<button
+        type="Update"
+        *ngIf="updateButton"
+        class="btn btn-warning"
+        (click)="update()"
+      >
+        Update Information
+      </button>
+    </form>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of data; let i = index">
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.msg }}</td>
+          <td>
+            <button type="edit" class="btn btn-warning" (click)="edit(i, item)">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button type="delete" class="btn btn-danger" (click)="delete(i)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-lg-2"></div>
+</div>

@@ -1,0 +1,150 @@
+<div class="container-fluid mt-3">
+  <h1>Three equal width columns</h1>
+  <p>
+    Note: Try to add a new div with class="col" inside the row class - this will
+    create four equal-width columns.
+  </p>
+
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#myModal"
+  >
+    Add Candidates
+  </button>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form action="/action_page.php">
+          <div class="mb-3 mt-3">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              [(ngModel)]="name"
+              placeholder="Enter Your Name"
+              name="name"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="addCandidates()"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div
+    class="col-lg-4 p-3 text-white"
+    style="background-color: rgb(207, 148, 148)"
+  >
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Full Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of candidate; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.name }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="dose(i)">
+              Dose-1 Done
+            </button>
+            <button type="button" class="btn btn-danger" (click)="delete(i)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="col-lg-4 p-3 text-white"
+    style="background-color: rgb(205, 186, 102)"
+  >
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Full Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of candidateData; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.name }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="dose1(i)">
+              Dose-2 Done
+            </button>
+            <button type="button" class="btn btn-danger" (click)="delete1(i)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="col-lg-4 p-3 text-white"
+    style="background-color: rgb(144, 223, 148)"
+  >
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Full Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of candidateData1; let i = index">
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.name }}</td>
+          <td>
+            <!-- <button type="button" class="btn btn-primary">Dose-2 Done</button> -->
+            <button type="button" class="btn btn-danger" (click)="delete2(i)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

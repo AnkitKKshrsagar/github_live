@@ -1,0 +1,23 @@
+<div class="container" style="margin-top: 50px;">
+  <h1>Write any input words</h1>
+  <input type="text" [(ngModel)]="data">
+  <h4>Real Time Data : {{data}}</h4>
+
+  
+    <button [ngStyle]="{'font-size.px':20, 'font-style':'italic', 'color':'red'}">ngStyle 1</button>
+<br>
+<br>
+<br>
+    <button [ngStyle]="AddStyle()">ngStyle 2</button>
+    <br>
+    <br>
+
+    <button [ngClass]="['btn-primary', 'btn-lg']">ng Class Array</button>
+    <br>
+    <br>
+    <button [ngClass]="{'btn-lg':false, 'btn-primary':true}">ng Class object</button>
+    <br>
+    <br>
+    <button [ngClass]="AddClass()">ng Class Function</button>
+
+</div>

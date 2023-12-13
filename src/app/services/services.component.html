@@ -1,0 +1,142 @@
+<div class="container">
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-lg-6">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="../../assets/1.jpg" alt="Los Angeles" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="../../assets/2.jpg" alt="Chicago" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="../../assets/3.jpg" alt="New york" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="../../assets/4.jpg" alt="New york" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="../../assets/5.jpg" alt="New york" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="../../assets/6.jpg" alt="New york" style="width:100%;">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Apple iPhone 14 Pro Max (256 GB) - Deep Purple </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>₹1,49,900</h1>
+          <p> Inclusive of all taxes
+            EMI starts at ₹7,197. No Cost EMI available</p>
+          <p>
+            <b>Brand</b> Apple<br>
+            <b>Model Name</b> iPhone<br>
+            <b>Network</b> Service Provider Unlocked for All Carriers<br>
+            <b>Operating System</b> iOS<br>
+            <b>Cellular Technology</b> 5G<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+            <h3><b>About this item</b></h3>
+            <ul>
+                <li>17.00 cm (6.7-inch) Super Retina XDR display featuring Always-On and ProMotion </li>
+                <li>Dynamic Island, a magical new way to interact with iPhone </li>
+                <li> 48MP Main camera for up to 4x greater resolution </li>
+                <li> Cinematic mode now in 4K Dolby Vision up to 30 fps </li>
+                <li> Action mode for smooth, steady, handheld videos </li>
+                <li> All-day battery life and up to 29 hours of video playback </li>
+                <li>A16 Bionic, the ultimate smartphone chip. Superfast 5G cellular</li>
+              </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<br>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-success" style="text-align: center;">Available Products :{{x}} </h1>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 50px;text-align: center;">
+            <div class="col-lg-6">
+                <button type="button" class="btn btn-success" (click)="book()" >Book Product</button>
+            </div>
+
+            <div class="col-lg-6">
+                <button type="button" class="btn btn-danger"(click)="cancle()" >Cancle Product</button>
+            </div>
+        </div>
+  <br>
+  <div class="row">
+    <div class="col-lg-12">
+        <br>
+        <br>
+        <form action="/action_page.php">
+            
+              <h1 style="text-align: center;">Shopping Cart Form</h1>
+              <p style="text-align: center;">Please fill in this form to create an account.</p>
+              <hr>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" id="email" required [(ngModel)]="data1">
+              <h3>{{data1}}</h3>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required [(ngModel)]="data2">
+              <h3>{{data2}}</h3>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required [(ngModel)]="data3">
+              <h3>{{data3}}</h3>
+
+              <hr>
+              <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          
+              <button type="submit" class="registerbtn">Register</button>
+                
+              <p>Already have an account? <a href="#">Sign in</a>.</p>
+          </form>
+    </div>
+  </div>
+  <br>
+  <br>
+
+</div>
